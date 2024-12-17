@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #faf8f5;
+            color: #5b3b1c;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .content {
+            flex: 2;
+            background: white;
+            border: 1px solid #e0dcd7;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-decoration: none;
+            color: #5b3b1c;
+            font-size: 14px;
+            border: 1px solid #5b3b1c;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .content h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .pricing {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .pricing div {
+            text-align: center;
+        }
+        .pricing .highlight {
+            background: #fff4d3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .form-section {
+            flex: 1;
+            background: white;
+            border: 1px solid #e0dcd7;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .form-section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #5b3b1c;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #705741;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #8c8377;
+        }
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .link a {
+            color: #5b3b1c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Main content -->
+        <div class="content">
+            <a href="index.html" class="back-button">&#8592; Back</a>
+            <h1>Дизайнер интерьера: расширенный курс</h1>
+            <p>18 месяцев обучения, старт 1 ноября</p>
+            <div class="pricing">
+                <div>
+                    <p>Частями без переплат</p>
+                    <h2 style="color: green;">4181 руб/в месяц</h2>
+                    <p style="text-decoration: line-through;">8325 руб. на 36 месяцев</p>
+                </div>
+                <div>
+                    <p>Одним платежом <span class="highlight">со скидкой 5%</span></p>
+                    <h2 style="color: green;">170 900 руб.</h2>
+                    <p style="text-decoration: line-through;">250 877 руб.</p>
+                </div>
+            </div>
+            <p style="text-align: center; background: #fff4d3; padding: 10px; border-radius: 5px;">- 20% акция действует до 25 октября</p>
+            <p style="text-decoration: underline;">У меня есть промокод</p>
+        </div>
+
+        <!-- Form section -->
+        <div class="form-section">
+            <h2>Запишитесь или получите консультацию</h2>
+            <form>
+                <input type="text" placeholder="Имя" required>
+                <input type="text" placeholder="+7(999) 999 - 99 - 99" required>
+                <input type="email" placeholder="Электронная почта" required>
+                <button type="submit">Записаться на курс</button>
+                <button type="button">Получить консультацию</button>
+            </form>
+            <div class="link">
+                Уже есть аккаунт? <a href="#">Войти</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        По всем вопросам 8 (800) 555 35 35 по будням с 10 до 19 по МСК. Бесплатно по России
+    </div>
+</body>
+</html>

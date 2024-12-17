@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход и регистрация</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            border: 1px solid black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkgray;
+        }
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .link a {
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="login">
+        <a href="index.html" class="black-button">&#8592; Black</a>
+        <div class="logo"><img src="images/logo.png" alt="Логотип" wight="100" height="100"></div>
+        <h1>Вход в личный кабинет</h1>
+        <form>
+            <input type="email" name="email" placeholder="Email/почта" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button>Войти</button>
+        </form>
+        <div class="link">
+            Нет аккаунта? <a href="#" onclick="switchToRegister()">Зарегистрируйтесь</a>
+        </div>
+    </div>
+
+    <div class="container" id="register" style="display: none;">
+        <a href="index.html" class="back-button">&#8592; Back</a>
+        <div class="logo"><img src="images/logo.png" alt="Логотип" wight="100" height="100"></div>
+        <h2>Регистрация</h2>
+        <form>
+            <h1>Регистрация</h1>
+            <input type="name" name="name" placeholder="Имя" required>
+            <input type="surname" name="surname" placeholder="Фамилия" required>
+            <input type="email" name="email" placeholder="Email/почта" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button>Войти</button> 
+        </form>
+        <div class="link">
+            Есть аккаунт? <a href="#" onclick="switchToLogin()">Войдите</a>
+        </div>
+    </div>
+
+    <script>
+        function switchToRegister() {
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('register').style.display = 'block';
+        }
+
+        function switchToLogin() {
+            document.getElementById('register').style.display = 'none';
+            document.getElementById('login').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
