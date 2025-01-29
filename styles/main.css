@@ -1,0 +1,23 @@
+.course {
+    text-decoration: none;
+    font-family: 'Comfortaa';
+    font-size: 1em;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 24px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    height: 200px;
+    line-height: 37px;
+    color:hsl(0, 0%, 0%);
+    background-color: #e4b0eea4;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    transition: box-shadow .18s ease-out;
+    background: .18s ease-out,color .18s ease-out;
+    text-decoration: none;
+}
