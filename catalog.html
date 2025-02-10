@@ -1,120 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #faf8f5;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .back-button {
-            text-decoration: none;
-            color: #333;
-            font-size: 14px;
-            border: 1px solid #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        .search {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .search input {
-            width: 100%;
-            max-width: 600px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .main {
-            display: flex;
-            gap: 20px;
-        }
-        .left, .right {
-            flex: 1;
-        }
-        .left {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .right {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .left button, .right button {
-            padding: 10px 20px;
-            font-size: 14px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #fff;
-            cursor: pointer;
-        }
-        .right {
-            justify-content: space-between;
-        }
-        .title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-    </style>
+    <title>Каталог</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo"><img src="images/logo.png" alt="Логотип" wight="100" height="100"></div>
-            <nav>
-                <a href="#">Контакты</a>
-                <a href="#">Практика и стажировка</a>
-                <a href="#">Блог</a>
-                <a href="login.html">Вход/Регистрация</a>
-            </nav>
+    <header class="header container">
+        <a class="header__logo logo"><img src="images/logo.png" alt="Логотип" wight="100" height="100"></a>
+         <div class="header__buttons">
+            <a class="main__button" href="index.html">Главная</a>
+            <a class="main__button" href="index.html">Избранное</a>
+            <a class="main__button" href="index.html">Отзывы</a>
+            <a class="main__button" href="catalog.html">Каталог</a>
+            <a class="main__button" href="registr.html">Вход</a>
+         </div>   
         </header>
-        <a href="index.html" class="back-button">&#8592; Back</a>
-        <div class="search">
-            <input type="text" placeholder="Профессия или навык">
-        </div>
-        <div class="main">
+    </header> 
+
+    <main class="catalog-page">
+            <div class="search">
+                <input type="text" placeholder="Профессия или направление"> 
+            </div>
+        <section class="container reverse" id="profession">
             <div class="left">
                 <div class="title">Направления</div>
-                <button>Направление профессии</button>
-                <button>Направление профессии</button>
-                <button>Направление профессии</button>
-                <button>Направление профессии</button>
-                <button>Направление профессии</button>
-                <button>Направление профессии</button>
-                <button>Направление профессии</button>
-                <button>Направление профессии</button>
-                <button>Направление профессии</button>
-                <button>Все курсы</button>
+                <button class="main__button button" type="button">Направление профессии 1</button>
+                <button class="main__button button" type="button">Направление профессии 2</button>
+                <button class="main__button button" type="button">Направление профессии 3</button>
+                <button class="main__button button" type="button">Направление профессии 4</button>
+                <button class="main__button button" type="button">Направление профессии 5</button>
             </div>
             <div class="right">
                 <div class="title">Популярное</div>
-                <button>Профессия</button>
-                <button>Профессия</button>
-                <button>Профессия</button>
-                <button>Профессия</button>
-                <button>Профессия</button>
-                <button>Профессия</button>
-                <button>Профессия</button>
-                <button>Профессия</button>
+                <button class="main__button button" type="button">Профессия 1</button>
+                <button class="main__button button" type="button">Профессия 2</button>
+                <button class="main__button button" type="button">Профессия 3</button>
+                <button class="main__button button" type="button">Профессия 4</button>
+                <button class="main__button button" type="button">Профессия 5</button>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
+    
 </body>
 </html>
+
