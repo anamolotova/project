@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head class="header container">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>регистрация</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/reg.css">
+    <link rel="stylesheet" href="styles/button.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+</head>
+
+
+<body>
+<main class="main container">
+    <div class="container" id="login" style="display: none;">
+        <a class="main__button" href="index.html">назад</a>
+        <h1 class="h1">Вход в личный кабинет</h1>
+        <form class="form" action="" method="post">
+            <input class="input" type="email" placeholder="Ваш e-mail">
+            <input class="input" type="password" placeholder="Пароль">
+            <button class="btn" type="submit">Войти</button>
+        </form>
+        <div class="link">
+            Нет аккаунта? <a href="#" onclick="switchToRegister()">Зарегистрируйтесь</a>
+        </div>
+    </div>
+
+    
+ <div class="container" id="register">
+    <a class="main__button" href="index.html">назад</a>
+    <h1 class="h1">Регистрация</h1>
+    <form class="form" action="" method="post">
+        <input class="input" type="text" placeholder="Ваше имя">
+        <input class="input" type="email" placeholder="Ваш e-mail">
+        <input class="input" type="password" placeholder="Пароль">
+        <input class="input" type="password" placeholder="Пароль еще раз">
+        <button class="btn" type="submit">Регистрация</button>
+    </form>
+    <div class="link">
+        Есть аккаунт? <a href="#" onclick="switchToLogin()">Войдите</a>
+    </div>
+ </div>
+</main>
+    
+
+<script>
+    function switchToRegister() {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('register').style.display = 'block';
+    }
+
+    function switchToLogin() {
+        document.getElementById('register').style.display = 'none';
+        document.getElementById('login').style.display = 'block';
+    }
+</script>
+</body>
+
+   
+
+</html>
