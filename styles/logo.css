@@ -1,8 +1,8 @@
 img {
-    display: block;
     max-width: 65%;
     height: auto;
 }
+
 .image {
     flex: 1;
     border: 2px solid rgba(0, 0, 0, 0);
@@ -12,3 +12,9 @@ img {
     align-items: center;
     font-size: 18px;
 }
+
+.header__logo {
+    max-width: 15%;
+    height: auto;
+}
+

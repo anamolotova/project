@@ -1,20 +1,11 @@
 /* Контейнер-обертка */
 .container {
-    position: relative;
     max-width: 1440px;
     margin: 0;
     padding: 0 120px;
     text-align: left;
-    flex: 1;
+    flex: 0;
 
-}
-
-/* Заголовки */
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 29px;
-    color: #0fab38;
 }
 
 /* Кнопки */

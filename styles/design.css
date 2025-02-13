@@ -14,7 +14,8 @@
 
 .design__content {
     max-width: 522px;
-
+    margin-left: -30%;
+    margin-top: 10%;
     padding-top: 50px;
 }
 
@@ -80,6 +81,7 @@
     max-width: 100px;
     margin-bottom: 27px;
 }
+
 .design__day-image {
     position: absolute;
     bottom: 7px;
@@ -93,4 +95,3 @@
     border-radius: 100%;
     background-color: #fdb100;
 }
-
