@@ -1,5 +1,5 @@
 .header {
-    background-color: rgba(162, 200, 238, 0.904);
+    background-color: #579bba;
     padding: 20px;
     position: sticky;
     top: 0;
@@ -16,7 +16,7 @@
 
 .header__item-link--active {
     font-weight: 600;
-    color: #3fa652;
+    color: #f0c59d;
 
     cursor: default;
 }
@@ -52,5 +52,5 @@
 }
 
 .main__button:hover {
-    background-color: #a3f09d; 
+    background-color: #f0c59d; 
 }

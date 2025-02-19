@@ -67,15 +67,15 @@ text-align: left;
 
 .promo_button {
     text-decoration: none; 
-    color: rgb(79, 78, 78); 
+    color: rgb(31, 30, 30); 
     padding: 10px 20px; 
-    background-color: #8ab7e7; 
+    background-color: #7eb9d4; 
     border-radius: 5px; 
     transition: background-color 0.3s ease; 
 }
 
 .promo_button:hover {
-    background-color: #a3f09d; /* Цвет фона при наведении */
+    background-color: #f0c59d; /* Цвет фона при наведении */
 }
 
 
