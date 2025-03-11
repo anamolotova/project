@@ -21,9 +21,9 @@ body {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-     width: 120%;
+    width: 120%;
     max-width: 400px;
-     box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .input {
