@@ -1,0 +1,151 @@
+.promo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.promo__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+text-align: left;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 88px;
+    color: #f7f7f7;
+    padding-top: 20px;
+
+
+}
+
+.promo__description {
+    text-wrap: balance;
+}
+
+.promo__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    border-bottom-left-radius: 200px;
+}
+
+.promo__buttons {
+    display: flex;
+    gap: 24px;
+
+    margin-top: 42px;
+}
+
+.promo__button {
+    min-width: 216px;
+    padding: 15px 35px;
+}
+
+.promo__button-add {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+    padding: 15px 35px 15px 45px;
+}
+
+.promo__button-add::before {
+    content: "+";
+
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.main__button {
+    text-decoration: none;
+    padding: 10px 20px; 
+    background-color: #eeeeee00; 
+    border-radius: 5px; 
+}
+
+.promo_buttons {
+    display: flex; 
+    gap: 10px; 
+}
+
+.promo_button {
+    text-decoration: none; 
+    color: rgb(0, 0, 0); 
+    padding: 10px 20px; 
+    background-color: #7ED4AD; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+.promo_button:hover {
+    background-color: #B03052; /* Цвет фона при наведении */
+}
+
+
+
+.catalog-page #profession {
+    display: flex; /* Используем Flexbox для подключения элементов */
+}
+
+.catalog-page .left {
+    order: 2; /* Устанавливаем порядок - профессии слева */
+    flex: 1; /* Занимает 50% доступного пространства */
+    padding: 10px; /* Отступы */
+}
+
+.catalog-page .right {
+    order: 1; /* Устанавливаем порядок - направления справа */
+    flex: 1; /* Занимает 50% доступного пространства */
+    padding: 10px; /* Отступы */
+}
+
+.catalog-page .title {
+    font-weight: bold;
+    margin-bottom: 0px; /* Отступ снизу у заголовков */
+}
+
+.catalog-page .main__button {
+    display: block; /* Кнопки отображаются как блоки */
+    margin: 5px 0; /* Отступы между кнопками */
+    padding: 10px; /* Внутренние отступы кнопок */
+    width: 100%; /* Ширина кнопок */
+    cursor: pointer;  /* Указатель на кнопке */
+    background-color: #78b0ec; /* Цвет фона кнопок */
+    color: rgb(82, 81, 80); /* Цвет текста кнопок */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Сглаживаем углы */
+}
+
+.catalog-page .main__button:hover {
+    background-color: #e7ab34; /* Цвет кнопки при наведении */
+}
+
+
+.catalog-page {
+    font-family: sans-serif;
+    padding-top: 50px;
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .search input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+.section_letter{
+    margin-top: 5%;
+}
+
