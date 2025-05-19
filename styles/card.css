@@ -1,0 +1,116 @@
+.card {
+    margin-top: 113px;
+}
+
+.card__item {
+  flex: 0 0 250px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  top: 0;
+  text-decoration: none;
+  background-color: #178b59;
+  will-change: top;
+  scroll-snap-align: start;
+  width: 278px;
+  flex-shrink: 0; /* Не сжимать */
+}
+
+.card__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    top: 10px;
+  }
+
+/* Контейнер карточек - добавлин отступ слева, чтобы карточки не "уезжали" влево */
+.card__list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 20px; /* небольшой внутренний отступ, чтобы карточки не прилипали к краю */
+    margin-top: 46px;
+    list-style: none;
+    width: 100%; /* чтобы растянуть на всю ширину контейнера */
+    box-sizing: border-box; /* чтобы padding учитывался в ширине */
+}
+
+
+
+
+.card__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fbfbfb;
+    font-family: 'TTNorms',Arial, sans-serif;
+}
+
+.card__description {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000000;
+    font-family: 'TTNorms',Arial, sans-serif;
+}
+
+/* Оформление обертки с стрелками */
+.scroll-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  /* Обертка для списка */
+  .scroll-wrapper {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    flex: 150;
+  }
+  
+
+  /* Стрелки */
+  .scroll-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    user-select: none;
+    transition: background 0.2s;
+  }
+  
+  .scroll-btn:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
+  
+  /* Специальные стили для стрелок слева и справа */
+  .left {
+    margin-right: 10px;
+  }
+  
+  .right {
+    margin-left: 10px;
+  }
+  
+
+    /* Кнопки прокрутки */
+    .scroll-btn {
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px;
+      color: #2c3e50;
+      transition: color 0.3s, transform 0.2s;
+    }
+    
+    .scroll-btn:hover {
+      color: #2980b9;
+      transform: scale(1.1);
+    }
+    
+    

@@ -1,0 +1,239 @@
+.course-page {
+    display: flex;
+    justify-content: space-between; /* Распределяет пространство между элементами */
+}
+
+.content {
+    flex: 1; /* Занимает доступное пространство */
+    margin-right: 20px; /* Отступ справа от content */
+}
+
+.form-section {
+    width: 300px; /* Фиксированная ширина для формы */
+}
+
+/* Общие стили для страницы */
+body {
+    font-family: 'Share-Tech-CYR', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Центрирование контейнера страницы */
+  .course-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  
+/* Стиль кнопки назад */
+
+.back-button {
+  display: inline-block; /* позволяет задавать паддинги и размеры */
+  margin-bottom: 25px; /* отступ снизу для разделения от других элементов */
+  font-size: 1em; /* размер шрифта */
+  padding: 8px 16px; /* внутренние отступы: сверху/снизу и слева/справа */
+  background-color: transparent; /* прозрачный фон */
+  border: 2px solid #07c3c6; /* рамка цвета ментола */
+  border-radius: 8px; /* скругление углов */
+  color: #07c3c6; /* цвет текста */
+  text-decoration: none; /* убрать подчеркивание */
+  transition: background-color 0.3s, color 0.3s, transform 0.2s; /* плавные переходы */
+}
+
+.back-button:hover {
+  background-color: #07c3c6; /* фон меняется на ментоловый */
+  color: #fff; /* цвет текста становится белым */
+  transform: scale(1.05); /* небольшое увеличение для эффекта наведения */
+}
+
+  /* Основной блок контента */
+  .content {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  /* Блок с ценами */
+  .pricing {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .pricing div {
+    background-color: #f7f7f7;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .pricing div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  .pricing p {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .pricing h2 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #07c3c6;
+  }
+  
+  .highlight {
+    color: #d0021b;
+    font-weight: bold;
+  }
+  
+  p[style*="background"] {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #97fdff;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  p[style*="text-decoration"] {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1em;
+    text-decoration: underline;
+    color: #07c3c6;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  p[style*="text-decoration"]:hover {
+    color: #07c3c6;
+  }
+  
+  /* Форма и кнопки */
+  .form-section {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #bdfeff, #ffffff);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    padding: 14px;
+    font-size: 1em;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-color: #007bff;
+  }
+  
+  button {
+    padding: 14px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button[type="submit"] {
+    background-color: #0a9c9e;
+    color: #fff;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  button[type="button"] {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #5a6067;
+    transform: translateY(-2px);
+  }
+  
+  /* Ссылка в блоке */
+  .link {
+    margin-top: 20px;
+    font-size: 1em;
+  }
+  
+  .link a {
+    color: #07c3c6;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .link a:hover {
+    color: #0056b3;
+  }
+  
+  /* Подвал */
+  .footer {
+    padding: 20px;
+    background-color: #06aaad;
+    color: #fff;
+    text-align: center;
+    font-size: 0.95em;
+    border-radius: 12px;
+    margin-top: 50px;
+  }
+  
+  /* Адаптивность для мобильных устройств */
+  @media(max-width: 768px) {
+    .pricing {
+      flex-direction: column;
+      align-items: center;
+    }
+    .pricing div {
+      width: 80%;
+    }
+    .form-section {
+      padding: 20px;
+    }
+  }
+  

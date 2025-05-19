@@ -1,0 +1,90 @@
+.registration-page {
+    font-family: 'LTSuperior', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.registration-page .container {
+    max-width: 400px;
+    margin: 50px auto; /* Центрирование контейнера */
+    padding: 20px;
+    background-color: #ffffff; /* Белый фон для контейнера */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+}
+
+.registration-page .h2 {
+    text-align: center;
+    color: #333; /* Цвет заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.registration-page .form {
+    display: flex;
+    flex-direction: column; /* Вертикальная ориентация элементов формы */
+}
+
+.registration-page .input {
+    margin-bottom: 15px; /* Отступ снизу */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 4px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+}
+
+.registration-page .input:focus {
+    outline: none; /* Убираем обводку по умолчанию */
+    border-color: #008080; /* Цвет границы при фокусе */
+   
+}
+
+.registration-page .btn {
+    padding: 10px;
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Закругленные углы */
+    background-color: #008080; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    cursor: pointer; /* Указатель курсора */
+    transition: background-color 0.3s ease; /* Плавный эффект при наведении */
+}
+
+.registration-page .btn:hover {
+    background-color: #136d6d; /* Темнее при наведении */
+}
+
+.registration-page .link {
+    margin-top: 15px; /* Отступ сверху */
+    text-align: center; /* Центрируем текст */
+}
+
+.registration-page .link a {
+    color: #008080 /* Цвет ссылки */
+
+}
+
+.registration-page .link a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.registration-page .main__button {
+    display: inline-block; /* Для правильного отображения */
+    margin-bottom: 15px; /* Отступ снизу */
+    padding: 10px; /* Внутренние отступы */
+    background-color: #ffffff; /* Серый фон */
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Закругленные углы */
+    color: #333; /* Цвет текста */
+    text-align: center; /* Центрируем текст */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.registration-page .main__button:hover {
+    background-color: #e5e5e5; /* Тень при наведении */
+}
+
+@media (max-width: 600px) {
+    .registration-page .form {
+        width: 95%; /* Ширина формы на маленьких экранах */
+    }
+}
+
