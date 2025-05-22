@@ -14,18 +14,7 @@
 
 @import "registr.css";
 
-@import "logo.css";
-
 @import "button.css";
 
-@import "card.css";
+@import "normalize.css";
 
-@import "design.css";
-
-@import "course.css";
-
-@import "review.css";
-
-@import "teacher.css";
-
-@import "normalize.css"
