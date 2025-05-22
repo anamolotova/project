@@ -11,35 +11,43 @@
 
 
 <body>
-<main class="main container registration-page">
-    <div class="container" id="login" style="display: none;">
-        <a class="main__button" href="index.html">назад</a>
-        <h2 class="h2">Вход в личный кабинет</h2>
-        <form class="form" action="" method="post">
-            <input class="input" type="email" placeholder="Ваш e-mail">
-            <input class="input" type="password" placeholder="Пароль">
-            <button class="btn" type="submit">Войти</button>
-        </form>
-        <div class="link">
-            Нет аккаунта? <a href="#" onclick="switchToRegister()">Зарегистрируйтесь</a>
-        </div>
-    </div>
 
-    
- <div class="container" id="register">
-    <a class="main__button" href="index.html">назад</a>
-    <h2 class="h2">Регистрация</h2>
-    <form class="form" action="" method="post">
-        <input class="input" type="text" placeholder="Ваше имя">
-        <input class="input" type="email" placeholder="Ваш e-mail">
-        <input class="input" type="password" placeholder="Пароль">
-        <input class="input" type="password" placeholder="Пароль еще раз">
-        <button class="btn" type="submit">Регистрация</button>
-    </form>
-    <div class="link">
-        Есть аккаунт? <a href="#" onclick="switchToLogin()">Войдите</a>
+<main class="registration-page">
+  <div class="container_registr" id="login" style="display: none;">
+    <div class="logo_container">
+      <a href="index.html">
+        <img class="logo" src="images/logo.png" alt="Логотип">
+      </a>
     </div>
- </div>
+    <h2 class="page_title">Вход в личный кабинет</h2>
+    <form class="form" action="" method="post">
+      <input class="form_input" type="email" placeholder="Ваш e-mail">
+      <input class="form_input" type="password" placeholder="Пароль">
+      <button class="form_button" type="submit">Войти</button>
+    </form>
+    <div class="form_link">
+      Нет аккаунта? <a href="#" onclick="switchToRegister()">Зарегистрируйтесь</a>
+    </div>
+  </div>
+
+  <div class="container_registr" id="register">
+    <div class="logo_container">
+      <a href="index.html">
+        <img class="logo" src="images/logo.png" alt="Логотип">
+      </a>
+    </div>
+    <h2 class="page_title">Регистрация</h2>
+    <form class="form" action="" method="post">
+      <input class="form_input" type="text" placeholder="Ваше имя">
+      <input class="form_input" type="email" placeholder="Ваш e-mail">
+      <input class="form_input" type="password" placeholder="Пароль">
+      <input class="form_input" type="password" placeholder="Пароль еще раз">
+      <button class="form_button" type="submit">Регистрация</button>
+    </form>
+    <div class="form_link">
+      Есть аккаунт? <a href="#" onclick="switchToLogin()">Войдите</a>
+    </div>
+  </div>
 </main>
     
 
