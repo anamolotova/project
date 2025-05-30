@@ -37,15 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //прокрутка отзывов
-
 document.addEventListener('DOMContentLoaded', function() {
-  const reviewList = document.querySelector('.review__list');
   const reviewItems = document.querySelectorAll('.review__item');
   const prevButton = document.querySelector('.review_prev');
   const nextButton = document.querySelector('.review_next');
   let currentIndex = 0;
 
-  if (!reviewList || !reviewItems || !prevButton || !nextButton) {
+  if (!reviewItems.length || !prevButton || !nextButton) {
     console.error("Не удалось найти все необходимые элементы.");
     return;
   }
@@ -66,11 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
     showReview(currentIndex);
   });
 
-  showReview(currentIndex); // Показываем первый отзыв при загрузке страницы
+  // Изначально показываем первый отзыв
+  showReview(currentIndex);
 });
 
-//для преподавателей
 
+
+//для преподавателей
 document.addEventListener('DOMContentLoaded', function() {
   const teacherItems = document.querySelectorAll('.teacher__item');
 
@@ -125,12 +125,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function openSettings() {
     settingsOverlay.classList.add('active');
   }
-
   // Функция для закрытия настроек
   function closeSettings() {
     settingsOverlay.classList.remove('active');
   }
-
   // Функция для смены темы
   function setTheme(theme) {
     // Удаляем классы тем, чтобы избежать конфликтов
@@ -141,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     localStorage.setItem('theme', theme); // Сохраняем выбранную тему в localStorage
   }
-
   // Проверяем, была ли тема сохранена ранее
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
@@ -201,29 +198,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const successPopupClose = document.getElementById('successPopupClose');
   const popupForm = document.getElementById('popupForm');
   const popupCourseTitle = document.getElementById('popupCourseTitle');
-
   // Функция для открытия всплывающего окна
   function openPopup(courseTitle) {
     popupCourseTitle.textContent = "Запись на курс: " + courseTitle;
     popupOverlay.style.display = 'flex';
   }
-
   // Функция для закрытия всплывающего окна
   function closePopup() {
     popupOverlay.style.display = 'none';
     popupForm.reset();
   }
-
   // Функция для открытия всплывающего окна успеха
   function openSuccessPopup() {
     successPopup.style.display = 'flex';
   }
-
   // Функция для закрытия всплывающего окна успеха
   function closeSuccessPopup() {
     successPopup.style.display = 'none';
   }
-
   // Обработчик клика на карточки
   cardItems.forEach(item => {
     item.addEventListener('click', function() {
@@ -231,13 +223,10 @@ document.addEventListener('DOMContentLoaded', function() {
       openPopup(courseTitle);
     });
   });
-
   // Обработчик клика на кнопку закрытия формы
   popupClose.addEventListener('click', closePopup);
-
   // Обработчик клика на кнопку закрытия окна успеха
   successPopupClose.addEventListener('click', closeSuccessPopup);
-
   // Обработчик отправки формы
   popupForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -249,22 +238,18 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Имя:', name);
     console.log('Почта:', email);
     console.log('Действие:', action);
-
     // Здесь можно добавить код для отправки данных формы на сервер
-
     closePopup();
     if (action === 'записаться') {  // Только если нажата кнопка "Записаться"
         openSuccessPopup();
     }
   });
-
   // Закрытие окна по клику вне его области (для формы)
   popupOverlay.addEventListener('click', function(event) {
     if (event.target === this) {
       closePopup();
     }
   });
-
   // Закрытие окна по клику вне его области (для успешного сообщения)
   successPopup.addEventListener('click', function(event) {
       if (event.target === this) {
@@ -272,6 +257,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+
+
 
 
 
@@ -296,3 +283,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add loading class to body on page load
   document.body.classList.add('loading');
 });
+
+
+
+
+
