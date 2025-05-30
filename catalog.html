@@ -9,13 +9,15 @@
 </head>
 <body>
     <header class="header">
-        <img class="header__logo" src="images/logo.png" alt="Логотип" />
+      <a href="index.html">
+        <img class="header__logo" src="images/logo.png" alt="Логотип">
+      </a>
         <div class="header__buttons">
           <a class="main__button" href="index.html">Главная</a>
           <a class="main__button" href="#teachers">Преподаватели</a>
           <a class="main__button" href="#review">Отзывы</a>
           <a class="main__button" href="catalog.html">Каталог</a>
-          <a class="main__button" href="registr.html">Вход/Регистрация</a>
+      <a class="main__button" href="registr.html">Вход</a>
           <button id="openSettings">Настройки</button>
         </div>
       </header>
@@ -50,28 +52,16 @@
       <p class="card_description"><span class="keep-light">Привнеси уют и стиль в любое пространство!</span></p>
     </li>
     <li class="card_item" data-category="web">
-      <h3 class="card_title">UX/UI-дизайн</h3><p class="card_description"><span class="keep-light">Делай интерфейсы, которыми хочется пользоваться снова и снова!</span></p></li><li class="card_item" data-category="industrial"><h3 class="card_title">3D-визуализация</h3><p class="card_description"><span class="keep-light">Покажи миру, каким он станет завтра!</span></p></li><li class="card_item" data-category="graphic"><h3 class="card_title">Коммуникационный дизайн</h3><p class="card_description"><span class="keep-light">Говори громко и ясно своим дизайном!</span></p></li><li class="card_item" data-category="industrial"><h3 class="card_title">Гейм-дизайн</h3><p class="card_description"><span class="keep-light">Создай игру, в которую невозможно перестать играть!</span></p></li><li class="card_item" data-category="space"><h3 class="card_title">Ландшафтный дизайн</h3><p class="card_description"><span class="keep-light">Сделай окружающий мир красивым и комфортным!</span></p></li><li class="card_item" data-category="industrial"><h3 class="card_title">Промышленный дизайн</h3<p class="card_description"><span class="keep-light">Изучите, как проектировать удобные и интуитивные интерфейсы!</span></p></li><li class="card_item" data-category="graphic"><h3 class="card_title">Моушен-дизайн</h3><p class="card_description"><span class="keep-light">Оживи картинку, удиви зрителя!</span</p></li><li class="card_item" data-category="web"><h3 class="card_title">UX/UI-дизайн</h3><p class="card_description"><span class="keep-light">Изучите, как проектировать удобные и интуитивные интерфейсы!</span></p></li>
-
-    <!-- Дублируйте эти элементы <li> несколько раз -->
-    <li class="card_item" data-category="graphic">
-      <h3 class="card_title">Графический дизайн</h3>
-      <p class="card_description"><span class="keep-light">Раскрась мир бренда яркими красками!</span></p>
-    </li>
-        <li class="card_item" data-category="web">
-      <h3 class="card_title">Веб-дизайн</h3>
-      <p class="card_description"><span class="keep-light">Создай сайт, который влюбляет с первого клика!</span></p>
-    </li>
-    <li class="card_item" data-category="space">
-      <h3 class="card_title">Дизайн интерьеров</h3>
-      <p class="card_description"><span class="keep-light">Привнеси уют и стиль в любое пространство!</span></p>
-    </li>
-    <li class="card_item" data-category="web">
-      <h3 class="card_title">UX/UI-дизайн</h3>
-      <p class="card_description"><span class="keep-light">Делай интерфейсы, которыми хочется пользоваться снова и снова!</span></p>
-    </li>
+      <h3 class="card_title">UX/UI-дизайн</h3><p class="card_description">
+        <span class="keep-light">Делай интерфейсы, которыми хочется пользоваться снова и снова!</span></p>
+      </li>
       <li class="card_item" data-category="industrial">
         <h3 class="card_title">3D-визуализация</h3>
         <p class="card_description"><span class="keep-light">Покажи миру, каким он станет завтра!</span></p>
+      </li>
+      <li class="card_item" data-category="industrial">
+        <h3 class="card_title">Дизайн одежды</h3>
+        <p class="card_description"><span class="keep-light">Создавай моду, которая вдохновит весь мир!</span></p>
       </li>
       <li class="card_item" data-category="graphic">
         <h3 class="card_title">Коммуникационный дизайн</h3>
@@ -93,8 +83,8 @@
         <p class="card_description"><span class="keep-light">Оживи картинку, удиви зрителя!</span></p>
       </li>
       <li class="card_item" data-category="web">
-        <h3 class="card_title">UX/UI-дизайн</h3>
-        <p class="card_description"><span class="keep-light">Изучите, как проектировать удобные и интуитивные интерфейсы!</span></p>
+        <h3 class="card_title">Типографика</h3>
+        <p class="card_description"><span class="keep-light">Сделай шрифты голосом, который услышат все!</span></p>
       </li>
 
   </ul>
@@ -105,7 +95,7 @@
   <div class="popup-overlay" id="popupOverlay">
     <div class="popup-content">
       <span class="popup-close" id="popupClose"><i class="fas fa-times"></i></span>
-      <h2 id="popupCourseTitle">Запишитесь или получите консультацию</h2>
+      <h4 id="popupCourseTitle">Запишитесь или получите консультацию</h4>
       <form id="popupForm">
         <div class="form-group">
           <label for="name">Имя:</label>
@@ -117,7 +107,7 @@
         </div>
         <div class="button-group">
           <button type="submit" class="popup-button primary" data-action="записаться">Записаться на курс</button>
-          <button type="submit" class="popup-button secondary" data-action="получить_консультацию">Получить консультацию</button>
+        <button type="submit" class="popup-button secondary" data-action="получить_консультацию">Получить консультацию</button>
         </div>
       </form>
     </div>
@@ -127,10 +117,12 @@
   <div class="popup-overlay success-popup" id="successPopup">
     <div class="popup-content">
       <span class="popup-close" id="successPopupClose"><i class="fas fa-times"></i></span>
-      <h2>Вы успешно записались!</h2>
+      <h1>Вы успешно подали заявку!</h1>
       <p class="popup-description">Мы свяжемся с вами в ближайшее время.</p>
     </div>
   </div>
+
+
 
     <div class="settings-overlay" id="settingsOverlay">
     <div class="settings-panel">
@@ -154,9 +146,9 @@
 
         <footer class="footer_container">
         <div class="footer__content">   
-            <h4 class="h4">Информация о нас</h4>
-                <h4 class="h4"> делали: Анна Молотова, Диана Семёнова, Мария Максимова</h4>
 
+            <p style="text-decoration: none;color:#efefef;">Информация о нас</p>
+            <p style="text-decoration: none;color:#efefef;">делали: Анна Молотова, Диана Семенова, Мария Максимова</p>
             <p style="text-decoration: none;color:#efefef;">Email: ghhfssk@gmail.com </p>
             <p style="text-decoration: none;color:#efefef;">Телефон: +7(321)-454-63-66</p>
             <iframe class="map"
