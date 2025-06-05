@@ -9,9 +9,7 @@
 </head>
 <body>
     <header class="header">
-      <a href="index.html">
-        <img class="header__logo" src="images/logo.png" alt="Логотип">
-      </a>
+        <img class="header__logo" src="images/logo.png" alt="Логотип" />
         <div class="header__buttons">
           <a class="main__button" href="index.html">Главная</a>
           <a class="main__button" href="#teachers">Преподаватели</a>
@@ -20,10 +18,12 @@
       <a class="main__button" href="registr.html">Вход</a>
           <button id="openSettings">Настройки</button>
         </div>
-      </header>
+    </header>
+
+
       <main class="catalog-page">
         <div class="search">
-          <input type="text" placeholder="Профессия или направление" />
+          <input type="text" placeholder="Поиск" />
         </div>
       
   
@@ -105,10 +105,10 @@
           <label for="email">Почта:</label>
           <input type="email" id="email" name="email" required placeholder="Ваш email">
         </div>
-        <div class="button-group">
-          <button type="submit" class="popup-button primary" data-action="записаться">Записаться на курс</button>
-        <button type="submit" class="popup-button secondary" data-action="получить_консультацию">Получить консультацию</button>
-        </div>
+                <div class="button-group">
+                    <button type="button" class="popup-button primary" id="signupButton">Записаться на курс</button>
+                    <button type="button" class="popup-button secondary" id="consultationButton">Получить консультацию</button>
+                </div>
       </form>
     </div>
   </div>
@@ -118,9 +118,19 @@
     <div class="popup-content">
       <span class="popup-close" id="successPopupClose"><i class="fas fa-times"></i></span>
       <h1>Вы успешно подали заявку!</h1>
-      <p class="popup-description">Мы свяжемся с вами в ближайшее время.</p>
+      <p class="popup-description">Мы свяжемся с вами в ближайшее время</p>
     </div>
   </div>
+
+    <!-- Окно успешной консультации -->
+    <div class="popup-overlay success-popup" id="successConsultationPopup">
+        <div class="popup-content">
+            <span class="popup-close" id="successConsultationPopupClose"><i class="fas fa-times"></i></span>
+            <h1>Заявка на консультацию принята!</h1>
+            <p class="popup-description">Наш специалист свяжется с вами в ближайшее время</p>
+        </div>
+    </div>
+
 
 
 
