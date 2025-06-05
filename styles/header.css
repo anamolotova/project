@@ -7,10 +7,10 @@
   display: flex;
   justify-content: space-between; /* Распределение элементов по краям */
   align-items: center;
-  column-gap: 80px;             /* Расстояние между элементами в колонке (при необходимости) */
-  width: 1200;
+  column-gap: 80px;             /* Расстояние между элементами в колонке */
+  max-width: 100%;
   box-shadow: 0 2px 8px #5a1516; /* Легкая тень */
-  animation: show-header 0.8s ease-out forwards; /* Анимация появления */
+
   margin: 0 auto; 
   border-radius: 15px;
 }
@@ -21,6 +21,7 @@
   height: 250px;
   object-fit: contain;
   transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .header__logo:hover {
@@ -39,7 +40,7 @@
   text-decoration: none;
   color: #fff; /* Цвет текста */
   padding: 10px 20px;
-  background-color: transparent; /* Без цвета фона по умолчанию */
+  background-color: transparent; /* фон для кнопки настроек */
   border-radius: 5px;
   transition: background-color 0.3s ease;
   font-weight: 600;
@@ -78,7 +79,7 @@
 /* ============================== */
 
 @media(max-width: 768px) {
-  /* Можно переопределить стили для мобильных устройств */
+
   .header {
     flex-direction: column;
     align-items: flex-start;
@@ -87,7 +88,7 @@
 
   .header__buttons {
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
   }
 }
 

@@ -1,18 +1,4 @@
 
-@font-face {
-    font-family: "LTSuperior";
-    src: url(../fonts/LTSuperior-Regular.woff2);
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    }
-    @font-face {
-    font-family: "LTSuperior";
-    src: url(../fonts/LTSuperior-Bold.woff2);
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-    }
     @font-face {
         font-family: "TTNorms";
         src: url(../fonts/TTNorms-Medium.woff2) format('woff2');

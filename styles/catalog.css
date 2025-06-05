@@ -6,9 +6,10 @@
 .section.filter_card {
   font-family: sans-serif;
   margin-top: 20px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .section_title {
@@ -53,7 +54,7 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  display: block; /*  Важно: делаем карточки видимыми по умолчанию */
+  display: block; /*карточки видимые по умолчанию */
 }
 
 .card_title {
@@ -67,25 +68,6 @@
 
 }
 
-/* Стиль для поиска */
-  .search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    margin: 0 auto 30px;
-  }
-  
-  .search input[type="text"] {
-    margin-top: 50px;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  
  h3 { /*от карточек*/
     font-family: 'TTNorms',Arial, sans-serif;
     font-size: 1.2rem;
@@ -97,15 +79,16 @@
   /* всплывающее окно для карточек*/
   /* ============================== */
 
-/* Общие стили */
+/* Обновленные стили для всей страницы */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'TTNorms', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
-/* Стили для всплывающего окна */
+
+/* Общие стили для всех всплывающих окон */
 .popup-overlay {
   display: none;
   position: fixed;
@@ -128,7 +111,18 @@ body {
   position: relative;
   max-width: 500px;
   width: 90%;
-  text-align: center;
+  animation: popup-appear 0.3s ease-out forwards;
+}
+
+@keyframes popup-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .popup-close {
@@ -145,16 +139,25 @@ body {
   color: #555;
 }
 
-h4 {
-  font-size: 2.4em;
-  margin-bottom: 18px;
+/*стили для заголовков в разных окнах */
+#popupOverlay h4 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
   color: #771011;
 }
 
-.popup-description {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  color: #888;
+#successPopup h1,
+#successConsultationPopup h1 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #771011;
+}
+
+/* Стили для формы */
+#popupForm {
+  margin-top: 20px;
 }
 
 .form-group {
@@ -187,20 +190,25 @@ h4 {
   border-color: #771011;
 }
 
+/* Стили для кнопок */
 .button-group {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 15px;
+  margin-top: 10px;
 }
 
 .popup-button {
-  padding: 14px 30px;
+  flex: 1;
+  min-width: 200px;
+  padding: 16px;
   border: none;
   border-radius: 8px;
   font-size: 1.1em;
   cursor: pointer;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
   font-weight: 500;
+  text-align: center;
 }
 
 .popup-button:hover {
@@ -211,20 +219,112 @@ h4 {
 .popup-button.primary {
   background-color: #771011;
   color: white;
-  box-shadow: 0 2px 6px #771012c2;
+  box-shadow: 0 2px 6px rgba(119, 16, 17, 0.76);
 }
 
 .popup-button.primary:hover {
-  background-color: #771011;
+  background-color: #5a0d0e;
 }
 
 .popup-button.secondary {
   background-color: #f0f0f0;
   color: #555;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .popup-button.secondary:hover {
   background-color: #e0e0e0;
 }
 
+/* Стили для сообщений в окнах успеха */
+.popup-description {
+  font-size: 1.2em;
+  text-align: center;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+  .popup-content {
+    padding: 20px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .popup-button {
+    min-width: 100%;
+  }
+  
+  #popupOverlay h4 {
+    font-size: 1.5em;
+  }
+  
+  #successPopup h1,
+  #successConsultationPopup h1 {
+    font-size: 1.8em;
+  }
+}
+
+
+
+ /* ============================== */
+  /* поиск карточек*/
+  /* ============================== */
+ .search {
+    position: relative;
+    max-width: 700px;
+    margin: 30px auto;
+  }
+
+  .search-box {
+    width: 100%;
+    padding: 15px 20px 15px 50px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .search-box:focus {
+    outline: none;
+    border-color: #771011;
+    box-shadow: 0 5px 20px #77101244;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #777;
+  }
+
+  /* Стили для пустых результатов */
+  .no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+    font-size: 1.2rem;
+    display: none;
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    margin: 20px;
+  }
+
+  .no-results.active {
+    display: block;
+  }
+
+  .no-results i {
+    font-size: 4rem;
+    color: #ddd;
+    display: block;
+    margin-bottom: 20px;
+  }
