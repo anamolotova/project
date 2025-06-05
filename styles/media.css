@@ -1,5 +1,5 @@
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .header {
     padding: 10px 20px; /* Уменьшаем внутренние отступы */
     flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
@@ -30,70 +30,70 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+.promo_content {
+    flex-direction: column;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+            
+.promo__text {
+    padding-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+            
+.promo__title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+            
+.promo__description {
+    font-size: 1.1rem;
+    padding: 0 10px;
+}
+            
+.promo__photo {
+    width: 100%;
+    border-radius: 15px;
+}
+     
+}
 
-
-     /* Медиа-запросы для мобильных устройств */
-        @media (max-width: 768px) {
-            .promo_content {
-                flex-direction: column;
-                padding: 20px 0;
-                margin-bottom: 30px;
-            }
+@media only screen and (max-width: 768px) {
+.section_title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
             
-            .promo__text {
-                padding-right: 0;
-                margin-bottom: 30px;
-                text-align: center;
-            }
+.design_container {
+    padding: 0 15px;
+}
             
-            .promo__title {
-                font-size: 2.2rem;
-                margin-bottom: 15px;
-            }
+.design_item {
+    padding: 15px;
+}
             
-            .promo__description {
-                font-size: 1.1rem;
-                padding: 0 10px;
-            }
+.design_title {
+    font-size: 1.3rem;
+}
             
-            .promo__photo {
-                width: 100%;
-                border-radius: 15px;
-            }
+.design__description {
+    font-size: 1rem;
+}
             
-            .section_title {
-                font-size: 1.8rem;
-                margin-bottom: 30px;
-            }
-            
-            .design_container {
-                padding: 0 15px;
-            }
-            
-            .design_item {
-                padding: 15px;
-            }
-            
-            .design_title {
-                font-size: 1.4rem;
-            }
-            
-            .design__description {
-                font-size: 1rem;
-            }
-            
-            .design_controls {
-                margin-top: 20px;
-            }
+.design_controls {
+    margin-top: 20px;
+}
             
 .design_prev,
 .design_next {
     padding: 10px 18px;
     font-size: 1rem;
 }
-            
-/* Адаптивные стили для мобильных устройств, чтобы преподаватели шли по двое */
-@media (max-width: 768px) {
+}  
+
+@media only screen and (max-width: 768px) {
   /* Сделать список преподавателей флекс-контейнером с переносом */
   .teacher__list {
     flex-direction: row;
@@ -120,14 +120,17 @@
     height: auto;
   }
 }
- }  
 
-@media (max-width: 768px) {
+
+@media only screen and (max-width: 768px) {
   /* Контейнер секции отзывов - делаем его относительно для позиционирования кнопок */
   .section.review {
     position: relative;
   }
 
+.review__title {
+    font-size: 1.3rem;
+}
   /* Стиль для контейнера кнопок, чтобы разместить их под отзывами */
   .review-buttons {
     display: flex;
@@ -148,55 +151,24 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
+
+
+            
+       
+
+            
+
 }
-
-
-
-        
-        @media (max-width: 480px) {
-            .main_container {
-                padding: 0 15px;
-            }
-            
-            .promo__title {
-                font-size: 1.8rem;
-            }
-            
-            .promo__description {
-                font-size: 1rem;
-            }
-            
-            .section_title {
-                font-size: 1.6rem;
-            }
-            
-            .design_title {
-                font-size: 1.3rem;
-            }
-            
-            .review__title {
-                font-size: 1.3rem;
-            }
-            
-            .btn {
-                padding: 10px 20px;
-                font-size: 1rem;
-            }
-        }
-
-
-@media (max-width: 768px) {
-  /* Устанавливаем высоту футера равной высоте шапки (например, 80px или 100px) */
+@media only screen and (max-width: 768px) {
   .footer_container {
-        width: 100%; /* Занимает всю ширину */
+    width: 100%; /* Занимает всю ширину */
     min-height: 100px; /* или нужная вам высота, равная высоте шапки */
     padding: 10px 20px; /* внутренние отступы, чтобы содержимое не обрезалось */
     box-sizing: border-box;
   }
-}
-
-
-@media (max-width: 768px) {
+  }
+  @media only screen and (max-width: 768px) {
   #scrollToTopBtn {
     display: none; /* по умолчанию скрыта на мобильных */
   }
@@ -204,4 +176,4 @@
     display: block; /* показываем при необходимости */
     opacity: 1;
   }
-}
+  }
