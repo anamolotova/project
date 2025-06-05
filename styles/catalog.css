@@ -245,29 +245,6 @@ body {
   margin-top: 15px;
 }
 
-/* Адаптивные стили */
-@media (max-width: 600px) {
-  .popup-content {
-    padding: 20px;
-  }
-  
-  .button-group {
-    flex-direction: column;
-  }
-  
-  .popup-button {
-    min-width: 100%;
-  }
-  
-  #popupOverlay h4 {
-    font-size: 1.5em;
-  }
-  
-  #successPopup h1,
-  #successConsultationPopup h1 {
-    font-size: 1.8em;
-  }
-}
 
 
 
