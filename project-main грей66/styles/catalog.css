@@ -1,0 +1,307 @@
+   /* ============================== */
+  /* Отдельные стили для страниц каталога */
+  /* ============================== */
+
+ /* Общие стили */
+.section.filter_card {
+  font-family: sans-serif;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.section_title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Кнопки фильтров */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-button:hover {
+  background-color: #ddd;
+}
+
+/* Карточки */
+.card_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /*  Выравнивание карточек по центру */
+  margin-bottom: 80px; /* Добавляем отступ снизу */
+}
+.card_item {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block; /*карточки видимые по умолчанию */
+}
+
+.card_title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card_description {
+  font-size: 1em;
+  color: #555;
+
+}
+
+ h3 { /*от карточек*/
+    font-family: 'TTNorms',Arial, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #771011;
+  }
+ 
+ /* ============================== */
+  /* всплывающее окно для карточек*/
+  /* ============================== */
+
+/* Обновленные стили для всей страницы */
+body {
+  font-family: 'TTNorms', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Общие стили для всех всплывающих окон */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+  animation: popup-appear 0.3s ease-out forwards;
+}
+
+@keyframes popup-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2.2em;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.2s ease;
+}
+
+.popup-close:hover {
+  color: #555;
+}
+
+/*стили для заголовков в разных окнах */
+#popupOverlay h4 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #771011;
+}
+
+#successPopup h1,
+#successConsultationPopup h1 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #771011;
+}
+
+/* Стили для формы */
+#popupForm {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+  outline: none;
+  border-color: #771011;
+}
+
+/* Стили для кнопок */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.popup-button {
+  flex: 1;
+  min-width: 200px;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  font-weight: 500;
+  text-align: center;
+}
+
+.popup-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.popup-button.primary {
+  background-color: #771011;
+  color: white;
+  box-shadow: 0 2px 6px rgba(119, 16, 17, 0.76);
+}
+
+.popup-button.primary:hover {
+  background-color: #5a0d0e;
+}
+
+.popup-button.secondary {
+  background-color: #f0f0f0;
+  color: #555;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popup-button.secondary:hover {
+  background-color: #e0e0e0;
+}
+
+/* Стили для сообщений в окнах успеха */
+.popup-description {
+  font-size: 1.2em;
+  text-align: center;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+
+
+
+ /* ============================== */
+  /* поиск карточек*/
+  /* ============================== */
+ .search {
+    position: relative;
+    max-width: 700px;
+    margin: 30px auto;
+  }
+
+  .search-box {
+    width: 100%;
+    padding: 15px 20px 15px 50px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .search-box:focus {
+    outline: none;
+    border-color: #771011;
+    box-shadow: 0 5px 20px #77101244;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #777;
+  }
+
+  /* Стили для пустых результатов */
+  .no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+    font-size: 1.2rem;
+    display: none;
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    margin: 20px;
+  }
+
+  .no-results.active {
+    display: block;
+  }
+
+  .no-results i {
+    font-size: 4rem;
+    color: #ddd;
+    display: block;
+    margin-bottom: 20px;
+  }
